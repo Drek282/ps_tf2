@@ -256,3 +256,7 @@ INSERT INTO `ps_config_overlays` (`id`, `gametype`, `modtype`, `map`, `minx`, `m
         (171, 'source', 'tf2', 'ctf_turbine_v3', -3856, -1752, 3856, 1752, 1506, 684, 1, 0, 0),
         (172, 'source', 'tf2', 'ctf_well', -4608, -5800, 1534, 6568, 500, 1017, 1, 0, 0),
         (173, 'source', 'tf2', 'pl_goldrush', -9215, -4093, -1539, 4111, 901, 944, 1, 0, 0);
+        
+INSERT INTO `ps_config` (`id`, `conftype`, `section`, `var`, `value`, `label`, `type`, `locked`, `verifycodes`, `options`, `help`) 
+    VALUES 
+        (1,'main',NULL,'meta_keywords','PsychoStats Game Server Player Statistics Team Fortress 2 TF TF2 Valve','Site HTML Meta Key Words','text',0,'','','These are the HTML meta key words for your PsychoStats.  They are used by search engines to provide search results.');
