@@ -91,7 +91,7 @@ function gametype() {
 }
 
 function modtype() {
-	$m = $this->data['gamedir'];
+	$m = $this->data['gamedir'] ?? null;
 	switch ($m) {
 		case 'tf':	return 'tf2';
 		default: 	return $m;
