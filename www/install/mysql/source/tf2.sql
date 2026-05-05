@@ -213,7 +213,7 @@ INSERT INTO `ps_config_awards` (`id`, `enabled`, `idx`, `type`, `negative`, `cla
         (27,1,130,'player',0,'','Most Backstabs','','{$player.link} has the most sneaky backstabs ({$award.value})','{$backstabkills}','desc','',0,'commify','source','tf2',1,'Players that are sneaky and like to kill others from the shadows!'),
         (28,1,160,'player',0,'','Most Flags Defended','','{$player.link} has defended the most flags ({$award.value})','{$flagsdefended}','desc','',1,'%s','source','tf2',1,'Player who has defended (or returned) the most flags from the enemy.'),
         (33,1,330,'player',0,'','Most Active Medic','','{$player.link} is the most active medic with {$award.value} medic actions.','{$bandage}','desc','',10,'commify','source','tf2',1,'Player with the most medic actions.'),
-        (40,1,400,'player',0,'','Homewrecker','','{$player.link} destroyed the most structures ({$award.value})','{$structuresdestroyed}','desc','',10,'commify','source','tf2',1,'Player that enjoys kicking over sand castles.');
+        (40,1,400,'player',0,'','Homewrecker','','{$player.link} destroyed the most structures ({$award.value})','{$itemsdestroyed}','desc','',10,'commify','source','tf2',1,'Player that enjoys kicking over sand castles.');
         
 INSERT INTO `ps_config_overlays` (`id`, `gametype`, `modtype`, `map`, `minx`, `miny`, `maxx`, `maxy`, `width`, `height`, `flipv`, `fliph`, `rotate`) 
     VALUES 
