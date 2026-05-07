@@ -1,0 +1,1 @@
+UPDATE `ps_config_awards` SET `expr` = '{$itemsdestroyed}' WHERE `ps_config_awards`.`id` = 40;
