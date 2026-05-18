@@ -16,7 +16,7 @@
 #	You should have received a copy of the GNU General Public License
 #	along with PsychoStats.  If not, see <http://www.gnu.org/licenses/>.
 #
-#	$Id: tf2.pm 556 2008-09-03 18:16:06Z lifo $
+#	$Id: tf2.pm 557 2026-05-16 22:16:06Z lifo $
 #
 package PS::Game::source::tf2;
 
@@ -26,7 +26,7 @@ use base qw( PS::Game::source );
 
 use util qw( :net print_r );
 
-our $VERSION = '1.00';
+our $VERSION = '1.00.' . (('$Rev: 557 $' =~ /(\d+)/)[0] || '000');
 
 
 sub _init { 
@@ -163,7 +163,31 @@ sub event_plrtrigger {
 		# ... something to do with the medic charge gun thingy ...
 		@vars = ( 'chargedeployed' );
 
-	} elsif ($trigger eq 'domination') {
+	} elsif ($trigger eq 'medic_death') {
+		my $props = $self->parseprops($propstr || '');
+		my $healed = int($props->{healing} || 0);
+		return unless $healed;   # only count if healing was present/non-zero
+
+		# find the medic (victim) from the log line
+		$p2 = $self->get_plr($plrstr2);
+		$self->_do_connected($timestamp, $p2) unless $p2->{_connected};
+		return if $self->isbanned($p2);
+		$p2->{basic}{lasttime} = $timestamp;
+		return unless $self->minconnected;
+
+		# increment counters on the medic (victim)
+		# there could be a case with 2 or more medics having same number of triggers....
+		# TODO: only award player with most healing done and have separate award for top healing points
+		# TODO: or rewrite this to work with SuperLogs plugin
+		$p2->{mod}{bandage}++;
+		#$p2->{basic}{bandage}++;
+		#$p2->{mod}{healing_done} += $healed;
+
+		# increment map totals for this stat
+		#my $m = $self->get_map;
+		#$m->{mod}{bandage}++;
+
+} elsif ($trigger eq 'domination') {
 		@vars = ( 'dominations' );
 		$p2 = $self->get_plr($plrstr2);
 		$self->plrbonus($trigger, 'victim', $p2) if $p2;	# 'enactor' will get their bonus below...
