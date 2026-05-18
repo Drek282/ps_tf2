@@ -36,6 +36,7 @@ CREATE TABLE `ps_map_data_source_tf2` (
   `dominations` smallint unsigned NOT NULL default '0',
   `assists` smallint unsigned NOT NULL default '0',
   `backstabkills` smallint unsigned NOT NULL default '0',
+  `bandage` smallint unsigned NOT NULL default '0',
   PRIMARY KEY  (`dataid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 CREATE TABLE `ps_plr_data_source_tf2` (
@@ -80,6 +81,7 @@ CREATE TABLE `ps_plr_data_source_tf2` (
   `backstabkills` smallint unsigned NOT NULL default '0',
   `revenge` smallint unsigned NOT NULL default '0',
   `chargedeployed` smallint unsigned NOT NULL default '0',
+  `bandage` smallint unsigned NOT NULL default '0',
   PRIMARY KEY  (`dataid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 CREATE TABLE `ps_plr_maps_source_tf2` (
@@ -124,6 +126,7 @@ CREATE TABLE `ps_plr_maps_source_tf2` (
   `backstabkills` smallint unsigned NOT NULL default '0',
   `revenge` smallint unsigned NOT NULL default '0',
   `chargedeployed` smallint unsigned NOT NULL default '0',
+  `bandage` smallint unsigned NOT NULL default '0',
   PRIMARY KEY  (`dataid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 CREATE TABLE `ps_plr_roles_source_tf2` (

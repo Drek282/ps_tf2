@@ -17,7 +17,7 @@
 #	You should have received a copy of the GNU General Public License
 #	along with PsychoStats.  If not, see <http://www.gnu.org/licenses/>.
 #
-#	$Id: tf2.pm 450 2008-05-20 11:34:52Z lifo $
+#	$Id: tf2.pm 451 2026-05-16 22:34:52Z lifo $
 #
 package PS::Map::source::tf2;
 
@@ -25,7 +25,7 @@ use strict;
 use warnings;
 use base qw( PS::Map::source );
 
-our $VERSION = '1.00.' . (('$Rev: 450 $' =~ /(\d+)/)[0] || '000');
+our $VERSION = '1.00.' . (('$Rev: 451 $' =~ /(\d+)/)[0] || '000');
 
 our $TYPES = {
 	redkills		=> '+',
@@ -73,6 +73,7 @@ our $TYPES = {
 
 	dominations		=> '+',
 	backstabkills		=> '+',
+	bandage				=> '+',
 
 	joinedred		=> '+',
 	joinedblue		=> '+',

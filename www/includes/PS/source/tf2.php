@@ -1,7 +1,7 @@
 <?php
 /**
 	PS::source::tf2
-	$Id: tf2.php 475 2008-06-01 14:20:09Z lifo $
+	$Id: tf2.php 476 2026-05-15 22:20:09Z lifo $
 
 	Halflife::tf2 mod support for PsychoStats front-end
 */
@@ -66,6 +66,7 @@ var $CLAN_MODTYPES = array(
 	'backstabkills'		=> '+',
 	'itemsbuilt'		=> '+',
 	'chargedeployed'	=> '+',
+	'bandage'			=> '+',
 	'revenge'		=> '+',
 
 	'joinedred'		=> '+',
