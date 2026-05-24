@@ -9,3 +9,4 @@ Version 3.2.8n (in progress)
 * [Fixed] Homewrecker award.
 * [Removed] Redundant readme.txt.
 * [Fixed] Most active medic award ( kinda, mostly - needs more work :) ).
+* [Improved] [Chore] Make pod2html happy.
